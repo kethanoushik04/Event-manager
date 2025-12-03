@@ -1,12 +1,11 @@
+import "./src/config/dontenv.js"
 import express from "express";
 import cors from "cors";
 import morgan from "morgan";
-import dotenv from "dotenv";
 import { connectDB } from "./src/config/db.js";
 import eventRoutes from "./src/routes/event.routes.js";
 
 
-dotenv.config();
 const app = express();
 app.use(cors());
 app.use(morgan("dev"));
